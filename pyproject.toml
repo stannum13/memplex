@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memplex"
+version = "0.2.0"
+description = "Spectral-statistic adaptive natural-gradient damping"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "curvlinops-for-pytorch>=3.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "matplotlib", "tqdm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
